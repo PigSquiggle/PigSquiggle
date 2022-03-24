@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="body">
+<input class="color" placeholder="COUNT" id="count"><br>
+<input class="color" placeholder="HEIGHT" id="height"><br>
+<input class="color" placeholder="WIDTH" id="width"><br><br>
+<input class="color" placeholder="RED" id="red"><br>
+<input class="color" placeholder="GREEN" id="green"><br>
+<input class="color" placeholder="BLUE" id="blue"><br>
+<p class="color" id="text"></p>
+<div id="holder"></div>
+<style>
+    .color {
+        position: relative;
+        left: 80%;
+    }
+</style>
+<script>
+    document.addEventListener("keydown", event => {
+        if (event.key === 'Enter') {
+            rep(event)
+        }
+    });
+    function rep(event) {
+        let count = document.getElementById("count")
+        let text = document.getElementById("text")
+        let i = 0
+        while (i < count.value) {
+            i++
+            create(event)
+        }
+    }
+    function create() {
+        let Y = Math.floor(Math.random()*770)
+        let X = Math.floor(Math.random()*1000)
+        let red = document.getElementById("red")
+        let green = document.getElementById("green")
+        let blue = document.getElementById("blue")
+        let height = document.getElementById("height")
+        let width = document.getElementById("width")
+        let rotated = Math.floor(Math.random()*90)
+        let math = Math.floor(Math.random()*red.value)
+        let math2 = Math.floor(Math.random()*green.value)
+        let math3 = Math.floor(Math.random()*blue.value)
+        let element = document.createElement("div")
+        let holder = document.getElementById("holder")
+        holder.appendChild(element)
+        holder.style.backgroundColor = "black"
+        element.style.height = height.value + "px"
+        element.style.transform = "rotate(" + rotated + "deg)"
+        element.style.borderRadius = "5px"
+        element.style.width = width.value + "px"
+        element.style.backgroundColor = "rgb(" + math + ", " + math2 + ", " + math3 + ")"
+        element.style.position = "absolute"
+        element.style.top = Y + "px"
+        element.style.left = X + "px"
+    }
+</script>
+</body>
+</html>

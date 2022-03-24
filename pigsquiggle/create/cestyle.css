@@ -1,0 +1,17 @@
+body {
+    background-color: rgb(172, 172, 172);
+}
+fieldset {
+    width: fit-content;
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+    font-family: Geneva;
+}
+legend {
+    background-color: white;
+    border-color: black;
+    border-width: 1px;
+    border-style: solid;
+}

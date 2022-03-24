@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>create elements</title>
+    <link rel="stylesheet" href="cestyle.css">
+</head>
+<body>
+    <fieldset><legend>Customize</legend>
+    <h1>TIPS:</h1>
+    1. Hover over the text boxes and see some options!<br>
+    2. The font I'm using for this page is Geneva if anyone wants to use it!
+    <h1>STYLES:</h1>
+    bottom padding<input type="text" id="p-b" title="[measurement] + px, in, cm, em, pt, %, or pc" spellcheck="false" placeholder="20px"><br>
+    top padding<input type="text" id="p-t" title="[measurement] + px, in, cm, em, pt, %, or pc" spellcheck="false" placeholder="20px"><br>
+    right padding<input type="text" id="p-r" title="[measurement] + px, in, cm, em, pt, %, or pc" spellcheck="false" placeholder="20px"><br>
+    left padding<input type="text" id="p-l" title="[measurement] + px, in, cm, em, pt, %, or pc" spellcheck="false" placeholder="20px"><br>
+    border style<input type="text" id="b-s" title="dashed, dotted, double, groove, hidden, inset, none, outset, ridge, solid" spellcheck="false" placeholder="solid"><br>
+    border width<input type="text" id="b-w" title="[measurement] + px, in, cm, em, pt, %, or pc" spellcheck="false" placeholder="10px"><br>
+    border color<input type="color" id="b-c" title="Pick a color! Any color!" spellcheck="false"><br>
+    <span id="red">text align<input type="text" id="t-a" title="center, right, left" spellcheck="false" placeholder="center"><br></span>
+    text size<input type="text" id="t-s" title="[measurement] + px, in, cm, em, pt, %, or pc" spellcheck="false" placeholder="20px"><br>
+    font<input type="text" id="f-f" title="fantasy, cursive, sans-serif, -apple-system, 'Helvetica Neue', Geneva, monospace, Impact, Arial, Tahoma" spellcheck="false" placeholder="cursive"><br>
+    height<input type="text" id="height" title="[measurement] + px, in, cm, em, pt, %, or pc" spellcheck="false" placeholder="300px"><br>
+    <span id="red">width<input type="text" id="width" title="[measurement] + px, in, cm, em, pt, %, or pc" spellcheck="false" placeholder="300px"><br></span>
+    text color<input type="color" id="t-c" title="Colors are the only things that matter in this world!" spellcheck="false"><br>
+    background color<input type="color" id="bg-c" title="Color can make a beautiful, burning, butterfly. Fluttering in the moonlight!" spellcheck="false">
+    <h1>ELEMENTS:</h1>
+    text<input type="text" id="text" title="Write some words here! If you don't know any words than look at a dictionary!" placeholder="I am a pig"><br>
+    element<input type="text" id="input" title="div, p, q, h1-h6, button, input" spellcheck="false" placeholder="p"><button onclick="start()">CREATE</button>
+    </fieldset>
+    <div id="created"></div>
+    <script>
+        function start() {
+            var br = document.createElement("br")
+            var pb = document.getElementById("p-b")
+            var pt = document.getElementById("p-t")
+            var pr = document.getElementById("p-r")
+            var pl = document.getElementById("p-l")
+            var bs = document.getElementById("b-s")
+            var bw = document.getElementById("b-w")
+            var bc = document.getElementById("b-c")
+            var ta = document.getElementById("t-a")
+            var ts = document.getElementById("t-s")
+            var font = document.getElementById("f-f")
+            var height = document.getElementById("height")
+            var width = document.getElementById("width")
+            var tc = document.getElementById("t-c")
+            var bgc = document.getElementById("bg-c")
+            var text = document.getElementById("text")
+            var input = document.getElementById("input")
+            var created = document.getElementById("created")
+
+            var elements = document.createElement(input.value)
+            created.appendChild(elements)
+            created.appendChild(br)
+            elements.append(text.value)
+
+            elements.style.backgroundColor = bgc.value
+            elements.style.color = tc.value
+            elements.style.width = width.value
+            elements.style.height = height.value
+            elements.style.fontFamily = font.value
+            elements.style.fontSize = ts.value
+            elements.style.textAlign = ta.value
+            elements.style.borderColor = bc.value
+            elements.style.borderWidth = bw.value
+            elements.style.borderStyle = bs.value
+            elements.style.paddingLeft = pl.value
+            elements.style.paddingRight = pr.value
+            elements.style.paddingTop = pt.value
+            elements.style.paddingBottom = pb.value
+        }
+    </script>
+</body>
+</html>

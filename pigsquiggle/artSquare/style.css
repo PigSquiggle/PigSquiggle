@@ -1,0 +1,10 @@
+#game {
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    position: absolute;
+}
+#color {
+    position: absolute;
+    bottom: 0;
+}

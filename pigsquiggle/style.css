@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    font-family: Avenir, serif;
+    background-color: #313142;
+}
+.buttons {
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+    font-size: 15px;
+    font-weight: bolder;
+    cursor: pointer;
+    color: orangered;
+    border: 3px orangered solid;
+    text-transform: uppercase;
+    background-color: transparent;
+}
+.buttons:hover {
+    border: 3px orangered solid;
+    color: white;
+    background-color: orangered;
+}
+.blocks {
+    background-color: #212133;
+    padding: 20px;
+    border-radius: 20px;
+}
+#nav {
+    text-align: center;
+}
+hr {
+    margin: 20px;
+    border: 0;
+    border-top: 4px #666666 double;
+}
+#header {
+    background-color: #313142;
+    border-radius: 20px;
+    padding: 20px;
+    width: fit-content;
+    text-align: center;
+    font-size: 40px;
+    color: orangered;
+    margin: 20px;
+}
+#aboutText {
+    color: #0cb206;
+    font-weight: bold;
+    font-size: 20px;
+}
+.blockHeader {
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+    color: #313142;
+}
+#info {
+    position: absolute;
+    right: 0;
+}
+#infoText {
+    color: steelblue;
+    font-weight: bold;
+    font-size: 20px;
+}
+#avatar {
+    width: 250px;
+    height: 250px;
+    position: absolute;
+    right: 20px;
+}
+#info a {
+    color: steelblue;
+}
+#info a:hover {
+    text-decoration: none;
+}
+#rules {
+    position: absolute;
+    top: 780px;
+}
+#rulesText {
+    color: orange;
+    font-weight: bold;
+    font-size: 20px;
+}

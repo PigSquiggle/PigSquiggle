@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" onmousemove="create(event)">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body id="body">
+<div id="holder"></div>
+<style>
+    #holder {
+        background-color: black;
+        width: fit-content;
+        height: fit-content;
+    }
+    #hover {
+        width: 100px;
+        height: 100px;
+        background-color: black;
+    }
+    .color {
+        position: relative;
+        left: 80%;
+        top: 1in;
+    }
+</style>
+<script>
+    function create(event) {
+        let color = document.getElementById("color")
+        let Y = Math.floor(Math.random()*1000)
+        let X = Math.floor(Math.random()*1000)
+        let rotated = Math.floor(Math.random()*100)
+        let math = Math.floor(Math.random()*200)
+        let math2 = Math.floor(Math.random()*200)
+        let math3 = Math.floor(Math.random())
+        let element = document.createElement("div")
+        let holder = document.getElementById("holder")
+        holder.appendChild(element)
+        holder.style.backgroundColor = "black"
+        //
+
+
+        element.style.height = "100px"
+        element.style.transform = "rotate(" + rotated + "deg)"
+        element.style.borderRadius = "25px"
+        element.style.width = "100px"
+        element.style.backgroundColor = "rgb(" + math + ", " + math2 + ", " + math3 + ")"
+        element.style.position = "absolute"
+        element.style.top = event.clientY-50 + "px"
+        element.style.left = event.clientX-50 + "px"
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pigsl raindome</title>
+</head>
+<body>
+<div id="container" draggable="true"></div>
+<script>
+    let R = Math.fround(Math.random()*300)
+    let G = Math.fround(Math.random()*300)
+    let B = Math.fround(Math.random()*300)
+    let i = 0
+        while (i < 3600) {
+            color()
+            i++
+        }
+    function color() {
+        let container = document.getElementById("container")
+        let block = document.createElement("div")
+        block.style.width = "4px"
+        block.style.height = "4px"
+        block.style.float = "left"
+        container.style.width = "240px"
+        container.style.height = "240px"
+        let noneRnot = 1
+        let timesRdivide = Math.round(Math.random())
+        let dAmount = Math.floor(Math.random()*5+1)
+        let tAmount = Math.floor(Math.random()*5+1)
+        if (noneRnot === 0) {
+            block.style.backgroundColor = "transparent"
+        }
+        else if (noneRnot !== 0) {
+            if (timesRdivide === 0) {
+                block.style.backgroundColor = "rgb(" + R*tAmount + ", "  + R*tAmount + ", " + R*tAmount +  ")"
+            }
+            else if (timesRdivide !== 0) {
+                block.style.backgroundColor = "rgb(" + R/dAmount + ", " + G/dAmount + ", " + B/dAmount +  ")"
+            }
+            if (block.style.backgroundColor === "rgb(255, 255, 255)") {
+                block.style.backgroundColor = "rgb(" + R/dAmount + ", " + R/dAmount + ", " + R/dAmount +  ")"
+            }
+        }
+        container.appendChild(block)
+    }
+</script>
+</body>
+</html>

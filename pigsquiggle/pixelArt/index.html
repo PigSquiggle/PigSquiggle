@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>pixelArt</title>
+</head>
+<body>
+<input type="number" id="width">
+<input type="number" id="height">
+<input type="color" id="color">
+<button onclick="create()">create</button>
+<div id="holder"></div>
+<script>
+    let height = document.getElementById("height")
+    let width = document.getElementById("width")
+    let colorV = document.getElementById("color")
+    let holder = document.getElementById("holder")
+    function create() {
+        let i = 0
+        let number = height.value*width.value
+        while (i < number) {
+            block()
+            i++
+        }
+        holder.style.width = width.value*10 + "px"
+        holder.style.height = height.value*10 + "px"
+    }
+    function block() {
+        let block = document.createElement("div")
+        block.style.border = "0.5px black solid"
+        block.style.width = "9px"
+        block.style.height = "9px"
+        block.style.float = "left"
+        holder.appendChild(block)
+        block.addEventListener("click", event => {
+            block.style.border = "none"
+            block.style.height = "10px"
+            block.style.width = "10px"
+            block.style.backgroundColor = colorV.value
+        })
+    }
+</script>
+</body>
+</html>
